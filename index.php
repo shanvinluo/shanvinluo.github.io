@@ -1,0 +1,93 @@
+<?php  session_start() ; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="Q8.css">
+</head>
+
+<body>
+
+
+  <table>
+    <tr>
+      <td><a href="index.php">
+          <img src="StableHeroes.jpg" alt="StableHeroes Logo" width="300" height="100"> </a></td>
+          <td>
+            <script src="Q8.js"></script>
+    <div id="timeDate"style="color: green; font-size: large; font-weight: 300; font-style: italic;">
+            <script>
+            const currentDate = getCurrentDate();
+            document.write(currentDate);
+            </script>
+            </div>
+          </td>
+    </tr>
+  </table>
+
+  <nav>
+    <ul style="display:flex; background-color:black; justify-content: space-between;">
+      <li class="list-items" id="home-tag"><a href="index.php" class="active" id="home-text">Home</a></li>
+      <li class="list-items"><a href="CreateAccount.php" class="tag">Create a new Account</a></li>
+      <li class="list-items"><a href="DogCat.php" class="tag">Find a dog/cat</a></li>
+      <li class="list-items"><a href="Dogcare.php" class="tag">Dog Care</a></li>
+      <li class="list-items"><a href="Catcare.php" class="tag">Cat Care</a></li>
+      <li class="list-items"><a href="login.php" class="tag">Have a pet to give away</a></li>
+      <li class="list-items"><a href="Contact.php" class="tag">Contact Us</a></li>
+    </ul>
+  </nav>
+
+
+
+  <div class="textbo2">
+    <p>
+      Welcome to the StableHeroes' website! Here, you will find all the information you need to bring a furry friend
+      into your home. We have a wide selection of cats and dogs, each with their own unique personalities, waiting for
+      you to give them the love and care they deserve. Browse through our available pets, read about the adoption
+      process, and find resources to help you make the transition to pet ownership as smooth as possible. Thank you for
+      considering adoption and we look forward to helping you find your perfect furry companion.
+
+
+    <h3>Reference used for the logo of StableHeroes:</h3>
+    <p><a href="https://namelix.com/">Namelix</a></p>
+    <h3>Links on how to care for pets!</h3>
+    <table>
+      <tr>
+        <td>
+          <a href="https://www.aspca.org/pet-care/general-Pet-Care">
+            <img
+              src="https://www.aspca.org/sites/default/files/styles/feature_slider_1502x700/public/billboard/desktop/renewal-c-ea4_yes-no_20230124_homepage.jpg?itok=sVz0akdO"
+              alt="ASPCA Pet Care" height="150" width="250">
+          </a>
+        </td>
+        <td>
+          <a href="https://www.akc.org/">
+            <img
+              src="https://www.wikihow.pet/images/thumb/a/a7/Take-Care-of-a-Dog-Step-19-Version-2.jpg/aid320614-v4-728px-Take-Care-of-a-Dog-Step-19-Version-2.jpg"
+              alt="AKC New Pet Care" height="200" width="250">
+          </a>
+        </td>
+        <td>
+          <a href="https://www.petmd.com/dog/care/responsible-pet-owners-checklist-taking-care-pet">
+            <img src="https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg"
+              alt="PetMD General Pet Care" height="200" width="200">
+          </a>
+        </td>
+      </tr>
+
+    </table>
+
+
+  </div>
+  <footer style="background-color: #333; padding: 20px; color: #fff; margin-bottom: 0%; display: block; flex-grow:1;">
+    <p>Copyright &copy; StableHeroes 2023</p>
+    <a href="#"
+      onclick="alert('Privacy/Disclaimer Statement: We promise to not sell or misuse your information and are not responsible for any incorrect information posted by users.')">Privacy/Disclaimer</a>
+  </footer>
+
+</body>
+
+</html>

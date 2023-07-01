@@ -1,0 +1,171 @@
+
+    li {
+      display: block;
+      color: black;
+      font-size: large;
+      padding: 16px;
+    }
+
+    .tag {
+      text-decoration: none;
+      color: white;
+    }
+
+    .tag:hover {
+      background-color: white;
+      color: black;
+      font-size: large;
+      transition: background-color 0.25s ease-in-out;
+    }
+
+    .tag:active {
+      color: black;
+    }
+
+
+    .list-items:hover {
+      background-color: white;
+    }
+
+
+
+    .list-items:hover .tag {
+      color: black;
+    }
+
+    .active {
+      background-color: green;
+      color: white;
+    }
+
+    #home-tag {
+      background-color: green;
+      text-decoration: none;
+    }
+
+    #home-text {
+      text-decoration: none;
+    }
+
+    #home-text:hover {
+      color: white;
+    }
+
+    #home-text:active {
+      color: white;
+    }
+
+
+.textbox {
+
+            margin-top: 3%;
+            background-color: lightgray;
+            border: 10px solid black;
+            width: 500px;
+            padding: 4%;
+            word-wrap: break-word;
+            color: black;;
+
+        }
+
+
+.textbox2 {
+          margin-top: 1%;
+          margin-left: 10%;
+          background-color: lightgrey;
+          border: 10px solid black;
+          width: 700px;
+          padding: 4%;
+          height:600px;
+          text-align: center;
+    
+          word-wrap: break-word;
+    
+        }
+    
+
+        .textbox3 {
+          float: inline-start;
+          margin-top: 10%;
+          background-color: lightgray;
+          border: 10px solid black;
+          width: 60%;
+          padding: 4%;
+          word-wrap: break-word;
+          font-size: x-large;
+    
+        }
+        .forms-out {
+          margin: 0 auto;
+          font-family: "Fira Sans", sans-serif;
+          padding: 15px 0;
+          }
+          
+          .forms-in {
+          width: 93%;
+          margin: 0 auto;
+          color: white;
+          padding: 15px 0;
+          }
+          
+          .forms-in div {
+          padding: 30px 20px;
+          max-width: 350px;
+          margin: 0 auto;
+          background: #168ab8;
+          border-radius: 5px;
+          margin-bottom: 15px;
+          }
+          
+          .forms-in h3 {
+          text-align: center;
+          }
+          
+          .forms-in input {
+          border: none;
+          width: 100%;
+          margin-bottom: 15px;
+          padding: 10px;
+          box-sizing: border-box;
+          border-radius: 3px;
+          }
+          
+          .forms-in button {
+          border: none;
+          padding: 7px 20px;
+          background: #e8f8ff;
+          color: #168ab8;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+          }
+          
+          .forms-in button:hover {
+          opacity: 0.7;
+          }
+          
+          .hide {
+          display: none;
+          }
+          
+          #forgot-password {
+          text-align: center;
+          font-size: 13px;
+          cursor: pointer;
+          }
+          
+          #forgot-password:hover {
+          opacity: 0.7;
+          }
+          body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-image: url(bg2.jpg);
+            background-size: cover;
+          }
+          #logout {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+          }
