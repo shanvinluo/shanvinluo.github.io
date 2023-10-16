@@ -74,10 +74,10 @@ function getCurrentDate() {
     }
   }
   function validateFormGiveaway() {
-    const inputs1 = document.getElementsByName("Dog/Cat[]");
-    const inputs2 = document.getElementsByName("Gender[]");
-    const inputs3 = document.getElementsByName("Friendly[]");
-    const inputs4 = document.getElementsByName("Family[]");
+    const inputs1 = document.getElementsByName("Dog/Cat");
+    const inputs2 = document.getElementsByName("Gender");
+    const inputs3 = document.getElementsByName("Friendly");
+    const inputs4 = document.getElementsByName("Family");
     const inputs5 = document.getElementsByName("age");
     const inputs6 = document.getElementsByName("breed");
     var capsule1 = false;
@@ -88,28 +88,28 @@ function getCurrentDate() {
     var capsule6 = false;
     for (let i = 0; i < inputs1.length; i++) {
       const input = inputs1[i];
-      if (input.name === "Dog/Cat[]" && input.checked) {
+      if (input.name === "Dog/Cat" && input.checked) {
         capsule1 = true;
         break;
       }
     }
     for (let i = 0; i < inputs2.length; i++) {
       const input = inputs2[i];
-      if (input.name === "Gender[]" && input.checked) {
+      if (input.name === "Gender" && input.checked) {
         capsule2 = true;
         break;
       }
     }
     for (let i = 0; i < inputs3.length; i++) {
       const input = inputs3[i];
-      if (input.name === "Friendly[]" && input.checked) {
+      if (input.name === "Friendly" && input.checked) {
         capsule3 = true;
         break;
       }
     }
     for (let i = 0; i < inputs4.length; i++) {
       const input = inputs4[i];
-      if (input.name === "Family[]" && input.checked) {
+      if (input.name === "Family" && input.checked) {
         capsule4 = true;
         break;
       }
@@ -120,7 +120,7 @@ function getCurrentDate() {
     if (inputs6.value !== ""){
       capsule6 = true;
     }
-    const inputsTextbox = document.getElementsByName("required");
+    const inputsTextbox= [document.getElementsByName("requiredText"),document.getElementsByName("requiredName"),document.getElementsByName("requiredGiven")];
     var capsule7 = true;
     for (let i = 0; i < inputsTextbox.length; i++) {
       const input = inputsTextbox[i];
@@ -138,7 +138,6 @@ function getCurrentDate() {
       alert("Please don't leave anything blank!");
     }
   }
-  
   function usernamePasswordCheck(){
   const usernameRegex = /^[a-zA-Z0-9]+$/;
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/;
@@ -147,17 +146,12 @@ function getCurrentDate() {
   
   if (!usernameRegex.test(username)) {
     alert('Invalid username');
-
-
   } 
   
   if (!passwordRegex.test(password)) {
     alert('Invalid password');
-
-
   }
 }
-
 function preventFormSubmit(event) {
   if (event) {
     event.preventDefault();
@@ -191,8 +185,3 @@ function validateForm1() {
 }
 
 document.getElementById("myForm").addEventListener("submit", validateForm1);
-
-
-function displayLogout(){
-  alert ('You have succesfully logged out. You can log back in by going to the Give a pet away page!');
-}
