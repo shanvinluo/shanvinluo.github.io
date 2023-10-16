@@ -1,4 +1,3 @@
-<?php  session_start() ; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,7 @@
 <body>
 <table>
         <tr>
-            <td><a href="index.php">
+            <td><a href="Home.html">
                     <img src="StableHeroes.jpg" alt="StableHeroes Logo" width="150" height="50"> </a></td>
             <td>
                 <h1>Have a pet to give away?</h1>
@@ -29,14 +28,14 @@
     </table>
     <nav>
         <ul style="display:flex; background-color:black; justify-content: space-between;">
-            <li class="list-items"><a href="index.php" class="tag">Home</a></li>
-            <li class="list-items" id="home-tag"><a href="CreateAccount.php" class="active" id="home-text">Create a new Account</a></li>
-            <li class="list-items"><a href="DogCat.php" class="tag">Find a dog/cat</a></li>
-            <li class="list-items"><a href="Dogcare.php" class="tag">Dog Care</a></li>
-            <li class="list-items"><a href="Catcare.php" class="tag">Cat Care</a></li>
-            <li class="list-items" ><a href="login.php" class="tag" >Have a pet to
+            <li class="list-items"><a href="index.html" class="tag">Home</a></li>
+            <li class="list-items" id="home-tag"><a href="CreateAccount.html" class="active" id="home-text">Create a new Account</a></li>
+            <li class="list-items"><a href="DogCat.html" class="tag">Find a dog/cat</a></li>
+            <li class="list-items"><a href="Dogcare.html" class="tag">Dog Care</a></li>
+            <li class="list-items"><a href="Catcare.html" class="tag">Cat Care</a></li>
+            <li class="list-items" ><a href="login.html" class="tag" >Have a pet to
                     give away</a></li>
-            <li class="list-items"><a href="Contact.php" class="tag">Contact Us</a></li>
+            <li class="list-items"><a href="Contact.html" class="tag">Contact Us</a></li>
         </ul>
     </nav>
 <?php 
@@ -47,11 +46,9 @@ $gender=$_POST['Gender'];
 $friendly=$_POST['Friendly'];
 $family=$_POST['Family'];
 $nopets=true;
-$petFound = false;
 echo '<h3>These Pets match what you are looking for! </h3>';
 if (($dogcat=="Dog")&&($breed=="german-shepherd"||$breed=="Doesn't-matter")&&($age=="1-4"||$age=="Not-matter")&&($gender=="female"||$gender=="Not-matter")&&($friendly=="yes")&&($family=="yes")){
     $nopets=false;
-
     echo '
        <div class="textbox3">
     <img src="https://thumbs.dreamstime.com/b/german-shepherd-dog-lying-forest-43789992.jpg" alt="Pet image">
@@ -82,7 +79,6 @@ if (($dogcat=="Cat")&&($breed=="Siamese"||$breed=="Doesn't-matter")&&($age=="1-4
 }
 if (($dogcat=="Dog")&&($breed=="golden-retriever"||$breed=="Doesn't-matter")&&($age=="4-6"||$age=="Not-matter")&&($gender=="male"||$gender=="Not-matter")&&$friendly=="yes"&&$family=="yes"){
     $nopets=false;
-
     echo '
     <div class="textbox3">
     <img src="https://thumbs.dreamstime.com/b/golden-retriever-18030958.jpg" alt="Pet image">
@@ -110,37 +106,8 @@ if (($dogcat=="Cat")&&($breed=="Maine Coon"||$breed=="Doesn't-matter")&&($age=="
    <p>Family friendly: Yes</p>
    <button> Interested?</button>
  </div>';
-
-    // open file for reading
-    $file = fopen("available_pet_info.txt", "r");
-
-
-
-    // loop through file line by line
-    while (!feof($file)) {
-        $line = fgets($file);
-        if (trim($line) === '') {
-            continue; // skip empty lines
-        }
-        $values = explode(":", $line);
-
-        // check if requested pet is available
-        if ($values[0] === $dogcat && $values[1] === $breed && $values[2] === $age && $values[3] === $gender && $values[4] === $friendly && $values[5] === $family) {
-            echo "<script>alert('Your requested Pet is available!')</script>";
-            echo " <div class=\"textbox3\"> <p>Species:$dogcat</p> <p>Breed: $breed</p> <p>Age: $age </p><p>Gets along with other oets: $friendly </p> <p>Family Friendly: $family </p>    <button> Interested?</button> </div>";
-            $petFound = true;
-            break;
-        }
-    }
-
-    // close file
-    fclose($file);
-
-    // display message if no matching pet was found
-
 }
-
-if ($nopets && !$petFound){
+if ($nopets){
     echo '<h1>NO PET MATCHES YOUR DESCRIPTION! :( </h1>';
 }
 ?>
@@ -151,4 +118,3 @@ if ($nopets && !$petFound){
               onclick="alert('Privacy/Disclaimer Statement: We promise to not sell or misuse your information and are not responsible for any incorrect information posted by users.')">Privacy/Disclaimer</a>
           </footer>
 </body>
-</html>

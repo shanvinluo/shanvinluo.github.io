@@ -1,4 +1,3 @@
-<?php  session_start() ; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +11,7 @@
 <body>
     <table>
         <tr>
-            <td><a href="index.php">
+            <td><a href="Home.html">
                     <img src="StableHeroes.jpg" alt="StableHeroes Logo" width="150" height="50"> </a></td>
             <td>
                 <h1>Have a pet to give away?</h1>
@@ -30,14 +29,14 @@
     </table>
     <nav>
         <ul style="display:flex; background-color:black; justify-content: space-between;">
-            <li class="list-items"><a href="index.php" class="tag">Home</a></li>
-            <li class="list-items" id="home-tag"><a href="CreateAccount.php" class="active" id="home-text">Create a new Account</a></li>
-            <li class="list-items"><a href="DogCat.php" class="tag">Find a dog/cat</a></li>
-            <li class="list-items"><a href="Dogcare.php" class="tag">Dog Care</a></li>
-            <li class="list-items"><a href="Catcare.php" class="tag">Cat Care</a></li>
-            <li class="list-items" ><a href="login.php" class="tag" >Have a pet to
+            <li class="list-items"><a href="index.html" class="tag">Home</a></li>
+            <li class="list-items" id="home-tag"><a href="CreateAccount.html" class="active" id="home-text">Create a new Account</a></li>
+            <li class="list-items"><a href="DogCat.html" class="tag">Find a dog/cat</a></li>
+            <li class="list-items"><a href="Dogcare.html" class="tag">Dog Care</a></li>
+            <li class="list-items"><a href="Catcare.html" class="tag">Cat Care</a></li>
+            <li class="list-items" ><a href="login.html" class="tag" >Have a pet to
                     give away</a></li>
-            <li class="list-items"><a href="Contact.php" class="tag">Contact Us</a></li>
+            <li class="list-items"><a href="Contact.html" class="tag">Contact Us</a></li>
         </ul>
     </nav>
     
@@ -75,4 +74,4 @@ if ($file1) {
               onclick="alert('Privacy/Disclaimer Statement: We promise to not sell or misuse your information and are not responsible for any incorrect information posted by users.')">Privacy/Disclaimer</a>
           </footer>
  </body>
- </html>
+ 
